@@ -233,6 +233,7 @@ a {
     display: flex;
     justify-content: center;
     gap: 24px;
+    margin-bottom: 8px;
 }
 .feature-soc-link {
     width: 100%;
@@ -242,6 +243,7 @@ a {
     justify-content: center;
 }
 .feature-soc-icon {
+    
 }
 .feature-list {
     display: flex;
@@ -520,7 +522,10 @@ gap: 24px;
     padding-top: 100px;
     padding-bottom: 100px;
 }
-
+.footer {
+    display: flex;
+    justify-content: center;
+}
 .footer .stile {
     text-transform: uppercase;
 }
@@ -546,6 +551,34 @@ gap: 24px;
     color: var(--accent);
     margin-top: 16px;
 }
+
+/* .footer-aside {
+    padding-top: 100px;
+    padding-bottom: 132px;
+    margin-right: auto;
+} */
+.footer-title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--white-background);
+
+}
+.footer-title {
+
+}
+.footer-soc-list {
+
+}
+
+.footer-soc-item {
+}
+.footer-soc-link {
+}
+
 
 
 
