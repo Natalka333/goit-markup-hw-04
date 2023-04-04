@@ -79,7 +79,7 @@ a {
     padding-right: 15px;
     padding-left: 15px;
     margin: 0 auto;
-    outline: 2px solid red; 
+    /* outline: 2px solid red;  */
 }
 /* HEADER */
 .header {
@@ -126,7 +126,6 @@ a {
     text-transform: uppercase;
     font-style: normal;
     color: var(--primary-text-color);
-
 }
 
 .header-list .link {
@@ -165,7 +164,7 @@ a {
 /* HERO */
 
 .hero-section {
-    width: 1440px;
+    max-width: 1440px;
     background-color: var(--primary-text-color);
     background-image: var(--hero-bg), url(../images/hero-img1.jpg);
     background-repeat: no-repeat;
@@ -269,7 +268,6 @@ a {
 }
 
 /* IMAGES */
-
 .images {
     padding-top: 120px;
     padding-bottom: 120px;
@@ -408,16 +406,16 @@ a {
     border: 1px solid rgba(231, 233, 252, 1);
     border-radius: 4px;
     padding: 12px 24px;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
-    0px 2px 1px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+    
 } 
-
 
 .btn:hover,
 .btn:focus {
     background-color: rgba(64, 75, 191, 1);
     color: var(--white-background);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .list {
     list-style: none;
@@ -440,6 +438,11 @@ a {
     border-top: none;
     padding: 32px 16px;
 }
+.work-aside:hover,
+.work-aside:focus {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
 .title-link {
     font-weight: 500;
     font-size: 20px;
@@ -515,16 +518,13 @@ gap: 24px;
 }
 
 /* FOOTER */
-
-
 .footer {
     background-color: var(--primary-text-color);
     padding-top: 100px;
     padding-bottom: 100px;
 }
-.footer {
+.container-bottom {
     display: flex;
-    justify-content: center;
 }
 .footer .stile {
     text-transform: uppercase;
@@ -552,11 +552,12 @@ gap: 24px;
     margin-top: 16px;
 }
 
-/* .footer-aside {
-    padding-top: 100px;
-    padding-bottom: 132px;
-    margin-right: auto;
-} */
+.footer-aside {
+    width: 208px;
+    height: 80px;
+margin-left: 120px;
+} 
+
 .footer-title {
     font-family: 'Roboto';
     font-style: normal;
@@ -565,18 +566,31 @@ gap: 24px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--white-background);
+    margin-bottom: 16px;
 
 }
 .footer-title {
-
 }
-.footer-soc-list {
 
+.footer-soc-list {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
 }
 
 .footer-soc-item {
+    width: 40px;
+    height: 40px;
 }
+
 .footer-soc-link {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--button-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
