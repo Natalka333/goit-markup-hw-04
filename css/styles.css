@@ -88,6 +88,7 @@ a {
     border-bottom: 1px solid var(--accent);
     padding-top: 24px;
     padding-bottom: 24px;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-navigation {
@@ -201,10 +202,14 @@ a {
     display: block;
     margin: 0 auto;
     padding: 16px 32px;
+    border: 1px solid transparent;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
+
 .hero-btn:hover,
 .hero-btn:focus {
     background-color: var(--pressed-state);
+    
 }
 
 /* SECTION FEATURE*/
@@ -223,28 +228,28 @@ a {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
-.feature-soc-list {
+
+.feature-container {
     background-color: var(--light);
     border-radius: 4px;
     width: 264px;
     height: 112px;
 }
-.feature-soc-list {
+.feature-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 24px;
     margin-bottom: 8px;
 }
-.feature-soc-link {
+.feature-icon {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.feature-soc-icon {
-    
-}
+
 .feature-list {
     display: flex;
     margin-right: auto;
@@ -404,19 +409,19 @@ a {
     color: var(--button-color);
     background-color: var(--light);
     display: block;
-    border: 1px solid rgba(231, 233, 252, 1);
+    border: 1px solid transparent;
     border-radius: 4px;
     padding: 12px 24px;
-    
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 } 
 
 .btn:hover,
 .btn:focus {
     background-color: rgba(64, 75, 191, 1);
     color: var(--white-background);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
-    0px 2px 1px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+    
 }
 .list {
     list-style: none;
@@ -434,7 +439,16 @@ a {
 .work-item {
     width: calc((100% - 48px) / 3);
 }
-.work-aside {
+
+.work-link {
+    display: block;
+    border-top: none;
+}
+.work-link:hover,
+.work-link:focus {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+/* .work-aside {
     border: 1px solid var(--accent);
     border-top: none;
     padding: 32px 16px;
@@ -442,7 +456,7 @@ a {
 .work-aside:hover,
 .work-aside:focus {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-}
+} */
 
 .title-link {
     font-weight: 500;
@@ -483,15 +497,12 @@ letter-spacing: 0.02em;
 text-transform: capitalize;
 margin-bottom: 72px;
 }
-.client-aside {
 
-}
 .client-soc-list {
 display: flex;
 justify-content: center;
 gap: 24px;
 }
-
 .client-soc-item {
     width: 168px;
     height: 88px;
@@ -504,28 +515,24 @@ gap: 24px;
     justify-content: center;
     border: 1px solid var(--client);
     border-radius: 4px;
+    color: var(--subtle-text);
 }
 .client-soc-link:hover,
 .client-soc-link:focus {
-    border: 1px solid var(--pressed-state);
+    border-color: var(--pressed-state);
+    color: var(--pressed-state);
 }
 
 .client-soc-icon {
-    fill: var(--subtle-text);
-}
-.client-soc-icon:hover,
-.client-soc-icon:focus {
-    fill: var(--pressed-state);
-}
+    fill: currentColor;
+} 
 
 /* FOOTER */
 .footer {
     background-color: var(--primary-text-color);
     padding-top: 100px;
     padding-bottom: 100px;
-    padding-left: 156px;
-    width: 1440px;
-    margin: 0 auto;
+
 }
 .container-bottom {
     display: flex;
