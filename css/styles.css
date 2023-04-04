@@ -522,6 +522,9 @@ gap: 24px;
     background-color: var(--primary-text-color);
     padding-top: 100px;
     padding-bottom: 100px;
+    padding-left: 156px;
+    width: 1440px;
+    margin: 0 auto;
 }
 .container-bottom {
     display: flex;
